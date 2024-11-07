@@ -1,7 +1,7 @@
 local utils = {}
 local previewers = require('telescope.previewers')
 
-function utils.get_svg_files()
+function utils.get_ext_files()
   local handle = io.popen('find "' ..
     vim.fn.getcwd() ..
     '" -type f \\( -name "*.svg" -o -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.webp" -o -name "*.gif" -o -name "*.bmp" \\) ' ..

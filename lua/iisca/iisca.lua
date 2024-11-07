@@ -5,8 +5,7 @@ local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
 local utils = require('iisca.utils')
 local log = require('iisca.log')
-
-local config = {}
+local config = require('iisca.config')
 
 local M = {}
 
@@ -59,7 +58,7 @@ local function register_cmds()
 end
 
 local function initialize(opts)
-  config = vim.tbl_deep_extend("force", config, opts or {})
+  config.setup(opts)
 end
 
 
