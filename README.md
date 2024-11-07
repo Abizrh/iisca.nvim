@@ -7,7 +7,7 @@
 
 ✨ Convert your images to ascii art in neovim
 
-# Requirements
+## ⚠️ Requirements
 - [tiv](https://github.com/stefanhaustein/TerminalImageViewer) for converting images to ascii art
 - Neovim version 0.10.0 or higher.
 
