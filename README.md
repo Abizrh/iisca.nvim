@@ -2,7 +2,7 @@
 # 🖼️ iisca.nvim
 
 > [!CAUTION]
-> Don not use still nder active development! ⚒️
+> Don not use, still under active development! ⚒️
 <br/>
 
 ✨ Convert your images to ascii art in neovim
