@@ -1,11 +1,17 @@
 local utils = {}
 local previewers = require('telescope.previewers')
+local log = require('iisca.log')
 
 function utils.get_ext_files()
   local handle = io.popen('find "' ..
     vim.fn.getcwd() ..
     '" -type f \\( -name "*.svg" -o -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.webp" -o -name "*.gif" -o -name "*.bmp" \\) ' ..
     ' -not \\( -path "*/.*" -o -path "*/node_modules/*" -o -path "*/vendor/*" -o -path "*/dist/*" -o -path "*/build/*" -o -path "*/.git/*" \\)')
+
+  if handle == nil then
+    log.error("Failed to get files")
+    return {}
+  end
 
   local result = handle:read("*a")
   handle:close()
