@@ -11,12 +11,12 @@ local config = {}
 local M = {}
 
 function M.open()
-  local svg_files = utils.get_svg_files()
+  local ext_files = utils.get_ext_files()
 
   local picker = pickers.new({}, {
     prompt_title = "Image Files",
     finder = finders.new_table({
-      results = svg_files,
+      results = ext_files,
       entry_maker = function(entry)
         return {
           value = entry,
