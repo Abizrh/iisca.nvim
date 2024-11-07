@@ -1,4 +1,5 @@
 local utils = {}
+local previewers = require('telescope.previewers')
 
 function utils.get_svg_files()
   local handle = io.popen('find "' ..
@@ -19,6 +20,16 @@ function utils.get_svg_files()
   end
 
   return files
+end
+
+function utils.execute_tiv()
+  local tiv_previewer = previewers.new_termopen_previewer({
+    title = " 📷 Ascii Preview 📷",
+    get_command = function(entry)
+      return { 'tiv', '-w', '64', '-h', '32', entry.path }
+    end
+  })
+  return tiv_previewer
 end
 
 return utils

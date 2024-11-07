@@ -3,18 +3,10 @@ local finders = require('telescope.finders')
 local conf = require('telescope.config').values
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
-local previewers = require('telescope.previewers')
 local utils = require('iisca.utils')
 local log = require('iisca.log')
 
 local config = {}
-
-local svg_previewer = previewers.new_termopen_previewer({
-  title = " 📷 Ascii Preview 📷",
-  get_command = function(entry)
-    return { 'tiv', '-w', '64', '-h', '32', entry.path }
-  end
-})
 
 local M = {}
 
@@ -35,7 +27,7 @@ function M.open()
       end
     }),
     sorter = conf.generic_sorter({}),
-    previewer = svg_previewer,
+    previewer = utils.execute_tiv(),
     attach_mappings = function(prompt_bufnr, map)
       actions.select_default:replace(function()
         local selection = action_state.get_selected_entry()
