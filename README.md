@@ -2,7 +2,7 @@
 # 🖼️ iisca.nvim
 ✨ Convert your images to ascii art in neovim
 
-![hero](https://github.com/user-attachments/assets/2c9838b0-dfe3-45a4-b27d-d9d214249192)
+![hero](https://raw.githubusercontent.com/Abizrh/iisca.nvim/main/preview.png)
 
 
 
