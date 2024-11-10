@@ -1,6 +1,6 @@
 
 # 🖼️ iisca.nvim
-> ✨ Convert your images to ascii art in neovim
+> ✨ Convert your images into ASCII characters in neovim
 
 ![hero](https://raw.githubusercontent.com/Abizrh/iisca.nvim/main/preview.png)
 
